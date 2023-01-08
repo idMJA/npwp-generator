@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NPWP Generator</title>
+    <!-- Opera Speed Dial Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+		<!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/favicon.png">
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/favicon.png">
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="assets/img/favicon.png">
+
+    <meta name="description" content="NPWP Generator is a fast way to generate NPWP and NPWP validation for free and download it for offline use on your computer.">
+    <meta name="keywords" content="npwp generator, npwp generator, how to make an npwp, how to validate npwp, free npwp, offline npwp, generate npwp, requirements for making npwp, cost of making npwp, tax identification number, tax npwp, download npwp validator">
+    <meta name="author" content="MJ1532" >
+    <meta property="og:url" content="http://npwp.mj1532.cf" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="NPWP Generator" />
+    <meta property="og:description" content="NPWP Generator is a fast way to generate NPWP and NPWP validation for free and download it for offline use on your computer." />
+    <meta property="og:image" content="assets/img/mj1532.png" />
+
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="vendor/jquery-confirm/jquery-confirm.min.css">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-confirm/jquery-confirm.min.js"></script>
+    <script src="assets/js/buttons.js"></script>
+    
+</head>
+<body>
+      <div class="container-fluid bg-dark nav-container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- <div class="container"> -->
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.jpg" alt="NPWP Generator" srcset="" class="d-inline-block align-top logo" height="50px">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto pl-5">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form-generate" id="menu-generate">Generate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form-validasi" id="menu-validasi">Validate</a>
+            </li>
+          </ul>
+          
+            <a href="#" type="button" class="btn btn-md btn-outline-light my-2 my-lg-0 mr-2 ml-5" id="download"><i class="fa fa-bolt"></i> Source Code</a>
+            <a href="#" type="button" class="btn btn-md btn-outline-warning my-2 my-lg-0" id="info"><i class="fa fa-question"></i></a> 
+          
+        </div>
+        <!-- </div> -->
+      </nav></div>
+ <!-- Akhir Navigasi -->
+ <!-- Notifikasi -->
+ <div class="container-fluid container-notifikasi pt-3">
+  <div class="row justify-content-end">
+      <div class="col-md-6 pr-3 pl-3">
+          
+        <div class="alert alert-info alert-dismissible fade show notifikasi" role="alert">
+          <strong>Welcome!</strong> Please Generate (randomly generate) NPWP and do NPWP Validation dynamically. Free <i class="fa fa-heart"></i>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-light alert-dismissible fade show notifikasi" role="alert">
+          This tool is called <strong>NPWP</strong> <em>Generator</em>
+        </div>
+        <div class="alert alert-light alert-dismissible fade show notifikasi" role="alert">
+          Modified By: <a href="https://youtube.com/@MJ1532_Dev"><strong>MJ1532</strong></a>
+        </div>
+
+    </div>
+  </div>
+</div>
+<!-- Akhir Notifikasi -->
+
+<div class="container">
+    <div class="row align-items-center row-form pt-5">
+
+            <div class="col-xl-6 col-lg-6" id="form-generate" hidden="">
+                <div class="container-content h-100">
+                    <h1 class="judul text-primary">Generate NPWP</h1>
+                    <hr>
+
+                    <div class="alert alert-light" role="alert">
+                        <h1 class="text-secondary" id="hasil-generate">00.000.000.0-000.000</h1>
+                    </div>
+                    
+                    <div class="alert alert-warning" role="alert">
+                      Generated results may only be used for training or educational activities. This NPWP is not a registered NPWP.
+                    </div>
+
+                    <div class="clearfix"></div>
+        
+                    <button class="btn btn-lg btn-outline-secondary" id="ubah-kpp" data-toggle="modal" data-target="#ubahKPP"><i class="fa fa-unlock"></i> Change KPP</button>
+                    <button class="btn btn-lg btn-primary" id="generate-npwp"><i class="fa fa-random"></i> Generate</button>
+                </div>
+            </div>
+        
+            <div class="col-xl-6 col-lg-6" id="form-validasi" hidden="">
+                <div class="container-content h-100">
+                    <h1 class="judul text-success">NPWP Validator</h1>
+                    <hr>
+
+                    <!-- form input -->
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text font-weight-bold text-secondary" id="basic-addon1" for="input-nomor-npwp">Enter the NPWP Number</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="00.000.000.0-000.000" name="input-nomor-npwp" id="input-nomor-npwp" maxlength="15">
+                          </div>
+                    <!-- end form input -->
+                    
+                    <div class="pesan-khusus-validasi"></div>
+                    <h6 class="text-secondary">Result <a href="#form-generate" id="link-generate">Generate <span><i class="fa fa-chevron-right"></i></span></a></h6>
+                    <h3 class="text-secondary" id="hasil-generate-rekomendasi">000000000000000</h3>
+                    <div class="alert alert-warning" role="alert">
+                      Enter only 15 digit numbers. <strong>Enter</strong> or press the key to validate.
+                    </div>
+
+                    <div class="clearfix"></div>
+                        
+                        <button type="reset" class="btn btn-lg btn-outline-danger" id="reset-npwp"><i class="fa fa-recycle"></i> Reset</button>
+                        <button class="btn btn-lg btn-success" id="validasi-npwp"><i class="fa fa-search"></i> Validate</button>
+                                            
+                </div>
+            </div>
+
+    </div> <!-- end row -->
+</div> <!--end container-->
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="ubahKPP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change KPP Code First</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <!-- Konten -->
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">KPP Code & Branch</span>
+                </div>
+                <input type="text" aria-label="Kode KPP" class="form-control" maxlength="3" placeholder="411" id="input-kode-kpp">
+                <input type="text" aria-label="Kode Cabang" class="form-control" maxlength="3" placeholder="000" id="input-kode-cabang">
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="pesan-inputan mt-3"></div>
+
+
+            <!-- Akhir konten -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal-tutup"><i class="fa fa-times"></i> Close</button>
+          <button type="button" class="btn btn-primary" id="modal-simpan"><i class="fa fa-save"></i> Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="vendor/fontawesome/js/all.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
