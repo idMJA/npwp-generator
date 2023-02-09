@@ -67,7 +67,7 @@ $(document).ready(function(){
    
                    $('.pesan-inputan').append(`
                        <div class="pesan-khusus alert alert-primary alert-dismissible fade show" role="alert">
-                           <strong>Berhasil di reset!</strong> Silahkan tutup dan Generate NPWP.
+                           <strong>Successfully reset!</strong> Please close and Generate NPWP.
                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                            </button>
@@ -96,7 +96,7 @@ $(document).ready(function(){
    
                            $('.pesan-inputan').append(`
                            <div class="pesan-khusus alert alert-danger alert-dismissible fade show" role="alert">
-                               <strong>Kode KPP/Cabang Harus Diisi 3 Digit ya!</strong> Silahkan isi atau tutup.
+                               <strong>The KPP/Branch Code must be filled in with 3 digits!</strong> Please fill in or close.
                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                <span aria-hidden="true">&times;</span>
                                </button>
@@ -106,7 +106,7 @@ $(document).ready(function(){
                            $('#input-kode-kpp').val('');
                            $('.pesan-inputan').append(`
                            <div class="pesan-khusus alert alert-warning alert-dismissible fade show" role="alert">
-                               <strong>Kode KPP Harus 3 Digit ya!</strong> Silahkan isi atau tutup.
+                               <strong>The KPP code must be 3 digits!</strong> Please fill in or close.
                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                <span aria-hidden="true">&times;</span>
                                </button>
@@ -115,7 +115,7 @@ $(document).ready(function(){
                            $('#input-kode-cabang').val('');
                            $('.pesan-inputan').append(`
                            <div class="pesan-khusus alert alert-warning alert-dismissible fade show" role="alert">
-                               <strong>Kode Cabang Harus 3 Digit ya!</strong> Silahkan isi atau tutup.
+                               <strong>The KPP code must be 3 digits!</strong> Please fill in or close.
                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                <span aria-hidden="true">&times;</span>
                                </button>
@@ -123,7 +123,7 @@ $(document).ready(function(){
                        } else {
                            $('.pesan-inputan').append(`
                            <div class="pesan-khusus alert alert-success alert-dismissible fade show" role="alert">
-                           <strong>Tersimpan!</strong> Silahkan tutup dan Generate NPWP.
+                           <strong>Saved!</strong> Please close and Generate NPWP.
                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                            </button>
@@ -449,14 +449,14 @@ $(document).ready(function(){
                if(AmbilNilaiNPWP() == ''){
                    $('.pesan-khusus').remove();
                    $('.pesan-khusus-validasi').append(`
-                   <div class="alert pesan-khusus alert-warning alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> <strong>NPWP kosong gaes!</strong> Silahkan isi atau tutup.
+                   <div class="alert pesan-khusus alert-warning alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> <strong>NPWP is empty guys!</strong> Please fill in or close.
                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                    </div>
                    `);
                } else if(AmbilNilaiNPWP() < 1){
                    $('.pesan-khusus').remove();
                    $('.pesan-khusus-validasi').append(`
-                   <div class="alert pesan-khusus alert-info alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> NPWP kosong = <strong>Tidak memiliki NPWP gaes!</strong>
+                   <div class="alert pesan-khusus alert-info alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> NPWP is empty = <strong>Don't have NPWP guys!</strong>
                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                    </div>
                    `);
@@ -483,7 +483,7 @@ $(document).ready(function(){
                else if(panjang_npwp < 15){
                    $('.pesan-khusus-tambahan').remove();
                    $('.pesan-khusus-validasi').append(`
-                   <div class="alert pesan-khusus-tambahan alert-light alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> <strong>Panjang NPWP `+panjang_npwp+` ?</strong> harusnya 15 digit gaes!.
+                   <div class="alert pesan-khusus-tambahan alert-light alert-dismissable fade show" role="alert"><i class="fa fa-question-circle"></i> <strong>NPWP length `+panjang_npwp+` ?</strong> it should be 15 digits guys!.
                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                    </div>
                    `);
