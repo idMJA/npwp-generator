@@ -10,4 +10,4 @@ https://npwp-generator.pages.dev
 
 https://mj1532.github.io/npwp-generator
 
-[![Npwp-Gen](https://github-readme-stats.vercel.app/api/pin/?username=MJ1532&repo=npwp-generator&show_owner=true)](https://github.com/MJ1532/npwp-generator)
+[![Npwp-Gen](https://github-readme-stats.vercel.app/api/pin/?username=MJ1532&repo=npwp-generator&show_owner=true&theme=tokyonight)](https://github.com/MJ1532/npwp-generator)
